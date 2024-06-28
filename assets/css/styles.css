@@ -77,6 +77,13 @@ header {
   justify-content: space-between;
 }
 
+.button-container {
+  display: flex;
+  margin-left: auto;
+  gap: 1rem;
+
+}
+
 header,
 footer {
   padding: 2rem;

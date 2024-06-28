@@ -10,7 +10,7 @@ a {
 }
 
 article {
-  flex: 1 1 50%;
+  flex: 1 1 50%; 
   border: 2px solid;
   border-radius: 4px;
   padding: 1rem;
@@ -39,6 +39,23 @@ footer {
   position: fixed;
   inset: 0;
   top: calc(100% - 5rem);
+}
+
+footer p {
+  display: flex;
+  justify-content: center;
+}
+
+footer ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: fit-content;
+}
+
+footer ul li {
+  margin: 1rem;
+  font-style: italic;
 }
 
 li {
