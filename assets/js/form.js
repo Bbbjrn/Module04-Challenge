@@ -5,9 +5,29 @@ formEl = document.querySelector('form');
 
 let redirectURL = '';
 
+const submission = function (event) {
+  event.preventDefault();
+  const userNameEl = document.querySelector('#username').value;
+  const titleEl = document.querySelector('#title').value;
+  const contentEl = document.querySelector('#content').value;
+
+  if (!userNameEl || !titleEl || !contentEl) {
+    alert('Please buy me some chicken');
+    return;
+  }
+
+  localStorage.setItem('name', userNameEl);
+  localStorage.setItem('email', titleEl);
+  localStorage.setItem('message', contentEl);
+
+  redirectPage('blog.html');
+};
+
 const redirectPage = function (url) {
   redirectURL = url;
   location.assign(url);
 }; 
 
 // TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
+formEl.addEventListener('submit', submission);
+
