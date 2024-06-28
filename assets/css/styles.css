@@ -62,6 +62,8 @@ ul {
   --disabled: #aaa;
   --error: #ff0022;
   --circle-color: #ffb100;
+  --circle-dark-color: #cf11d8; 
+  --brat-green: #8ace00;
 }
 
 * {

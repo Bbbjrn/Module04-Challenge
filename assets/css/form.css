@@ -88,6 +88,13 @@ section {
   border-left: solid .5rem var(--disabled);
 }
 
+.dark .circle {
+  background: linear-gradient(
+    var(--light-accent), 
+    var(--circle-dark-color), 
+    var(--dark-accent)
+)}
+
 /*
   IDs
 */
