@@ -98,6 +98,21 @@ section {
 /*
   IDs
 */
+
+.alert-visible {
+  display: block;
+  padding: 1rem;
+  background-color: linear-gradient(
+    var(--light-accent),
+    var(--brat-green),
+    var(--dark-accent));
+     /* Customize the background color as needed */
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
 #error {
   color: var(--error);
   opacity: .75;

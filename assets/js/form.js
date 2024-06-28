@@ -1,45 +1,64 @@
-// Select the form element
+//TODO: Select the form element
 let formEl = document.querySelector('form');
 
-// Function to handle form submission
+//TODO: Function to handle form submission
 const submission = function (event) {
   event.preventDefault();
 
-  // Get form data
+  //TODO: Get form data
   const userNameEl = document.querySelector('#username').value;
   const titleEl = document.querySelector('#title').value;
   const contentEl = document.querySelector('#content').value;
 
-  // Check if any fields are empty
+//TODO: Function to dynamically create an alert
+  const createAlert = function (message) {
+    // Check if an alert already exists and remove it
+    let existingAlert = document.querySelector('.alert-visible');
+    if (existingAlert) {
+      existingAlert.remove();
+    }
+  
+    // Create a new alert element
+    let alertEl = document.createElement('div');
+    alertEl.classList.add('alert-visible');
+    alertEl.textContent = message;
+  
+    // Insert the alert element into the DOM, just before the form
+    formEl.parentNode.insertBefore(alertEl, formEl);
+  };
+
+  //TODO: Check if any fields are empty
   if (!userNameEl || !titleEl || !contentEl) {
-    alert('Please complete the form');
+    //call on createAlert function
+    createAlert('Please complete the form');
+    
     return;
   }
 
-  // Create a user object with the form data
+  //TODO: Create a user object with the form data
   const user = {
     username: userNameEl,
     title: titleEl,
     content: contentEl,
   };
 
-  // Get existing posts from local storage or initialize an empty array
+  //TODO: Get existing posts from local storage or initialize an empty array
   let posts = JSON.parse(localStorage.getItem('posts')) || [];
 
-  // Add the new post to the posts array
+  //TODO: Add the new post to the posts array
   posts.push(user);
 
-  // Save the updated posts array to local storage
+  //TODO: Save the updated posts array to local storage
   localStorage.setItem('posts', JSON.stringify(posts));
 
-  // Redirect to the blog page
+  //TODO: Redirect to the blog page
   redirectPage('blog.html');
 };
 
-// Function to redirect to a different page
+//TODO: Function to redirect to a different page
 const redirectPage = function (url) {
   location.assign(url);
 };
 
-// Add an event listener to the form for the submit event
+//TODO: Add an event listener to the form for the submit event
 formEl.addEventListener('submit', submission);
