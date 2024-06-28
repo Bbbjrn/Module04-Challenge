@@ -60,7 +60,7 @@ input[type=submit]:active {
 }
 
 input[type=submit]:hover {
-  border-style: inset;
+  border-style: inset; 
   background-color: var(--dark-accent-action);
 }
 
