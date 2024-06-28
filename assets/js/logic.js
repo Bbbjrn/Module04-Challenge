@@ -29,4 +29,9 @@ function applyMode() {
   if (circle) {
     circle.classList.toggle('dark', mode === 'dark');
   }
+  if (mode === 'dark') {
+    toggleButton.textContent = '🫥';
+  } else {
+    toggleButton.textContent = '😎';
+  }
 }
