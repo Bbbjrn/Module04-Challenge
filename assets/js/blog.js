@@ -21,7 +21,7 @@ const getPosts = function () {
 
 //TODO: Function to build and append an article element for each post
 const buildPost = function (post) {
-    let articleSection = document.createElement('article');
+    let articleEl = document.createElement('article');
     let titleEl = document.createElement('h2');
     let contentEl = document.createElement('blockquote');
     let authorEl = document.createElement('p');
@@ -30,11 +30,11 @@ const buildPost = function (post) {
     contentEl.textContent = post.content;
     authorEl.textContent = "Created by: " + post.username;
 
-    articleSection.appendChild(titleEl);
-    articleSection.appendChild(contentEl);
-    articleSection.appendChild(authorEl);
+    articleEl.appendChild(titleEl);
+    articleEl.appendChild(contentEl);
+    articleEl.appendChild(authorEl);
 
-    mainEl.appendChild(articleSection);
+    mainEl.appendChild(articleEl);
 };
 
 //TODO: Function to render the list of blog posts
