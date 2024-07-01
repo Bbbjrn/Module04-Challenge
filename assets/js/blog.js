@@ -1,9 +1,5 @@
-//TODO: Select the main element
+//TODO: Select the main elements
 let mainEl = document.querySelector('main');
-let articleEl = document.querySelector('article');
-let articleH2El = document.querySelector('article h2');
-let articleBqEl = document.querySelector('article blockquote');
-let articlePEl = document.querySelector('article p');
 
 //TODO: Function to build and append an element to the DOM
 const buildElement = function (element, text, className) {
