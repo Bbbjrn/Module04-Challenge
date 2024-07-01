@@ -102,11 +102,7 @@ section {
 .alert-visible {
   display: block;
   padding: 1rem;
-  background-color: linear-gradient(
-    var(--light-accent),
-    var(--brat-green),
-    var(--dark-accent));
-     /* Customize the background color as needed */
+  background-color: red;
   color: white;
   border-radius: 4px;
   margin-bottom: 1rem;
